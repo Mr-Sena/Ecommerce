@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class Challenge {
+	
+	public static void main(String [] args) {
+		
+		//Variáveis: 
+		Scanner entrada = new Scanner(System.in);
+		int qtdeConsumir;
+		char resposta;
+		boolean loop = true;
+		int contador = 1;
+		boolean alreadyCart = false; //Variável para identificar se um item já esta no carrinho.
+		
+		//Vetores:
+		int codigoProdutos[] = new int[10];
+		String nomeProdutso[] = new String[10];
+		int produtosEstoque[] = new int[10];
+		double valorProdutos[] = new double[10];
+		int itensCarrinho[] = new int[10];
+		
+		
+	}
+
+}

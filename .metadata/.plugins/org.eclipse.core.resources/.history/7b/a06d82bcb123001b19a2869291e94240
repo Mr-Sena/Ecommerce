@@ -1,0 +1,48 @@
+import java.util.Scanner;
+public class Challenge {
+	public static void main(String[]args) {
+			
+				Scanner entrada = new Scanner(System.in);
+				
+				//Variáveis:
+				char resposta;
+				int qtdeConsumir;
+				int contador = 1;
+				boolean loop = true;
+				boolean alreadyCart = false; //Variável para identificar se um item já esta no carrinho.
+				
+				
+				//Vetores:
+				int codigoProdutos[] = new int[10];
+				int produtosEstoque[] = new int[10];
+				int itensCarrinho[] = new int[10];
+				
+				String nomeProdutos[] = {"Leite", "Cereal", "Farinha", "Maizena", "Bolacha", "Azeite", "Oleo", "Sabão", "Sal", "Açucar"};	
+				double valorProdutos[] = {4.57, 3.02, 5.43, 3.55, 6.55, 4.55, 7.33, 1.99, 3.82, 4.29};
+				String especificacao[] = {"L", "Cx", "Kg", "Kg", "Pct", "L", "L", "Uni", "Kg", "Kg"};
+				
+				System.out.println("\t\t\tGENERATIONS STORE");
+				System.out.println("==================================================================");
+				System.out.println("\nCÓDIGO\t\tPRODUTO\t\tQTND. PRODUTOS\t\tPREÇO UNIT.\t\t\n");
+				
+				for (int x = 0; x<10; x++)
+				{
+					codigoProdutos[x] = (x+1);
+					System.out.println("%d\t\t %s\t\t %d\t\t\t   %.2f");
+					
+					
+				}
+				//System.out.printf(" %s " , nomeProdutos);
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			}
+		}
