@@ -1,0 +1,12 @@
+package orietadoAobjetos;
+
+public class Estoque {
+	
+	private int codigosProdutos[] = new int[10];
+	private int produtosEstoque[] = {10, 10, 10, 10, 10, 10, 10, 10, 10, 10};
+	
+	private String nomeProdutos[] = {"Leite", "Cereal", "Arroz", "Atum", "Feijão", "Azeite", "Oleo", "Sabão", "Sal", "Açucar"};
+	private double valorProdutos[] = {4.57, 3.02, 9.43, 3.55, 6.55, 4.55, 7.33, 1.99, 3.82, 4.29};
+	
+
+}

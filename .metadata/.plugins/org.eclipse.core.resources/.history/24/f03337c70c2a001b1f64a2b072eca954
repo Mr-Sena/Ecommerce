@@ -1,0 +1,49 @@
+package orientadoAobjetos;
+
+import orientadoAobjetos.Teste1;
+import orientadoAobjetos.ClasseTeste;
+
+import java.util.*;
+
+public class TesteDoTeste {
+
+	public static void main(String args []) {
+		
+		
+		Scanner entrada = new Scanner(System.in);
+		
+		int numero;
+		char resposta;
+		
+		List <Teste1> cadastro = new ArrayList<>();
+		
+		System.out.print("Quantidade de funcionários a cadastrar: ");
+		numero = entrada.nextInt();
+		for (int x = 1; x <= numero; x++) {
+			System.out.print(x + "° empregado - ");
+			System.out.print("Terceiro? [S/N] ");
+			resposta = entrada.next().toUpperCase().charAt(0);
+			System.out.print("Digite o código do funcionario: ");
+			String codigo = entrada.next();
+			System.out.print("Horas: ");
+			double horas = entrada.nextDouble();
+			System.out.print("Valor da hora: ");
+			double valorHora = entrada.nextDouble();
+			
+			if (resposta == 'S') {
+				System.out.print("Valor adicional deste terceiro: ");
+				double adicional = entrada.nextDouble();
+				cadastro.add(new ClasseTeste(codigo, horas, valorHora, adicional)); //Segundo o ed isso daqui é polimorfismo.
+			} else {
+				cadastro.add(new Teste1(codigo, horas, valorHora));
+			}
+			
+		}
+		
+		System.out.println("FOLHA DE PAGAMENTO");
+		for(Teste1 func : cadastro) {
+			System.out.println(func.getCod() + " - " + String.format("%.2f", func.pagamentoSalario()));;
+		}
+	}
+	
+}

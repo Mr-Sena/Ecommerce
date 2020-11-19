@@ -1,0 +1,46 @@
+package orientadoAobjetos;
+
+public class Funcionario {
+	
+	private String cod;
+	protected double horas;
+	protected double valorHora;
+	
+	
+	public Funcionario(String cod, double horas, double valorHora) {
+		this.cod = cod;
+		this.horas = horas;
+		this.valorHora = valorHora;
+	}
+	public Funcionario() {
+	}
+	public String getCod() {
+		return cod;
+	}
+	public void setCod(String cod) {
+		this.cod = cod;
+	}
+	public double getHoras() {
+		return horas;
+	}
+	public void setHoras(double horas) {
+		this.horas = horas;
+	}
+	public double getValorhora() {
+		return valorHora;
+	}
+	public void setValorhora(double valorhora) {
+		this.valorHora = valorhora;
+	}
+	
+	public double pagamentoSalario() {
+		
+		double total;
+		total = this.horas * this.valorHora;
+		
+		return total;
+		
+	}
+	
+	 //+ pagamentoSalario: double (horas*valor hora) + adicional
+}

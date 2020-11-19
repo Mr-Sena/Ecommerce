@@ -1,0 +1,32 @@
+package testes;
+
+import java.util.ArrayList;
+
+public class ArrayLists {
+
+	public static void main(String args[]) {
+		ArrayList<String> nomes = new ArrayList<String>();
+		
+		//Adc nomes
+		nomes.add("Josué");
+		nomes.add("Hector");
+		nomes.add("Ana");
+		nomes.add("Helena");
+		
+		
+		//Removendo um item pelo indice:
+		nomes.remove(1);
+		//Removendo um elemento pelo nome:
+		nomes.remove("Ana");
+		
+		//Exibindo toda a ArrayList
+		System.out.println(nomes.toString());
+		
+		//Como apagar todos os itens: 
+		nomes.clear();
+		
+		//Exibindo com indice específicos
+		System.out.println(nomes.get(0));
+	}
+	
+}

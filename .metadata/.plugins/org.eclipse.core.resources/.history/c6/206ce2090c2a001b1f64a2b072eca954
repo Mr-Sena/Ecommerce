@@ -1,0 +1,30 @@
+package orietadoAobjetos;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class Estoque {
+	
+	//private int codigosProdutos[] = new int[10];
+	private ArrayList <Integer> codigoProdutos = new ArrayList<Integer>();
+	
+	//private int produtosEstoque[] = {10, 10, 10, 10, 10, 10, 10, 10, 10, 10};
+	private ArrayList <Integer> produtosEstoque = new ArrayList<Integer>(Arrays.asList(10, 10, 10, 10, 10, 10, 10, 10, 10, 10));
+	
+	//private String nomeProdutos[] = {"Leite", "Cereal", "Arroz", "Atum", "Feijão", "Azeite", "Oleo", "Sabão", "Sal", "Açucar"};
+	private ArrayList <String> nomeProdutos = new ArrayList<String>(Arrays.asList("Leite", "Cereal", "Arroz", "Atum", "Feijão", "Azeite", "Oleo", "Sabão", "Sal", "Açucar"));
+
+	//private double valorProdutos[] = {4.57, 3.02, 9.43, 3.55, 6.55, 4.55, 7.33, 1.99, 3.82, 4.29};
+	private ArrayList <Double> valorProdutos = new ArrayList<Double>(Arrays.asList(4.57, 3.02, 9.43, 3.55, 6.55, 4.55, 7.33, 1.99, 3.82, 4.29));
+
+	public Estoque(ArrayList<Integer> codigoProdutos, ArrayList<Integer> produtosEstoque,
+			ArrayList<String> nomeProdutos, ArrayList<Double> valorProdutos) {
+		super();
+		this.codigoProdutos = codigoProdutos;
+		this.produtosEstoque = produtosEstoque;
+		this.nomeProdutos = nomeProdutos;
+		this.valorProdutos = valorProdutos;
+	}
+	
+
+}

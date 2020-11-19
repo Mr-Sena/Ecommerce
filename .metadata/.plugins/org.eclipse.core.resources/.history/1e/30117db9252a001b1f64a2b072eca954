@@ -1,0 +1,73 @@
+package orientadoAobjetos;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Scanner;
+public class Teste {
+
+	public static void main(String args []) {
+		
+		Scanner leia = new Scanner(System.in);
+		int produtoSelecionado;
+		
+		//private int codigosProdutos[] = new int[10];
+		ArrayList <Integer> codigoProdutos = new ArrayList<Integer>();
+		//
+		//private int produtosEstoque[] = {10, 10, 10, 10, 10, 10, 10, 10, 10, 10};
+		ArrayList <Integer> produtosEstoque = new ArrayList<Integer>(Arrays.asList(10, 10, 10, 10, 10, 10, 10, 10, 10, 10));
+		
+		//private String nomeProdutos[] = {"Leite", "Cereal", "Arroz", "Atum", "Feijão", "Azeite", "Oleo", "Sabão", "Sal", "Açucar"};
+		 ArrayList <String> nomeProdutos = new ArrayList<String>(Arrays.asList("Leite", "Cereal", "Arroz", "Atum", "Feijão", "Azeite", "Oleo", "Sabão", "Sal", "Açucar"));
+
+		//private double valorProdutos[] = {4.57, 3.02, 9.43, 3.55, 6.55, 4.55, 7.33, 1.99, 3.82, 4.29};
+		ArrayList <Double> valorProdutos = new ArrayList<Double>(Arrays.asList(4.57, 3.02, 9.43, 3.55, 6.55, 4.55, 7.33, 1.99, 3.82, 4.29));
+
+		boolean loop = true;
+		
+		
+		fachada();
+		
+		Estoque armazem = new Estoque(codigoProdutos, produtosEstoque, nomeProdutos, valorProdutos);
+		
+		for(int x = 0; x < 10; x++) {
+			codigoProdutos.add(x + 1);
+			System.out.printf("%d\t\t%s\t\t     %d\t\t\t  R$%.2f\n", armazem.codigoProdutos.get(x), armazem.nomeProdutos.get(x), armazem.produtosEstoque.get(x), armazem.valorProdutos.get(x));
+		}
+		
+		while(loop) {
+			System.out.print("Olá! Digite o código do produto desejado: ");
+			produtoSelecionado = leia.nextInt();
+			
+			
+			if(produtoSelecionado < 0 || produtoSelecionado > 10)
+			{
+				System.out.println("Código invalido!! Por favor insira o código novamente.");
+			} else if (armazem.itensCarrinho.contains(produtoSelecionado)){
+				System.out.println("Produto já existe no carrinho.");
+			} else {
+				break;
+			}
+		}
+		
+		
+		/*for(String itens : armazem.nomeProdutos) {
+			System.out.println(itens);
+		}
+		
+		armazem.consumirProdutos(5, 7);
+		
+		for(Integer itens : armazem.produtosEstoque) {
+			System.out.println(itens);
+		}*/
+
+	}
+	
+	public static void fachada() {
+		
+		System.out.println("\t\t\tGENERATIONS STORE");
+		System.out.println("==================================================================");
+		System.out.println("\nCÓDIGO\t\tPRODUTO\t\tQTND. PRODUTOS\t\tPREÇO UNIT.\t\t\n");
+	
+	}
+	
+}

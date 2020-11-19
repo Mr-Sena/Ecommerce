@@ -1,0 +1,30 @@
+package orietadoAobjetos;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class Teste {
+
+	public static void main(String args []) {
+		
+		//private int codigosProdutos[] = new int[10];
+		ArrayList <Integer> codigoProdutos = new ArrayList<Integer>();
+		//
+		//private int produtosEstoque[] = {10, 10, 10, 10, 10, 10, 10, 10, 10, 10};
+		ArrayList <Integer> produtosEstoque = new ArrayList<Integer>(Arrays.asList(10, 10, 10, 10, 10, 10, 10, 10, 10, 10));
+		
+		//private String nomeProdutos[] = {"Leite", "Cereal", "Arroz", "Atum", "Feijão", "Azeite", "Oleo", "Sabão", "Sal", "Açucar"};
+		 ArrayList <String> nomeProdutos = new ArrayList<String>(Arrays.asList("Leite", "Cereal", "Arroz", "Atum", "Feijão", "Azeite", "Oleo", "Sabão", "Sal", "Açucar"));
+
+		//private double valorProdutos[] = {4.57, 3.02, 9.43, 3.55, 6.55, 4.55, 7.33, 1.99, 3.82, 4.29};
+		ArrayList <Double> valorProdutos = new ArrayList<Double>(Arrays.asList(4.57, 3.02, 9.43, 3.55, 6.55, 4.55, 7.33, 1.99, 3.82, 4.29));
+
+
+		Estoque armazem = new Estoque(codigoProdutos, produtosEstoque, nomeProdutos, valorProdutos);
+		System.out.println(armazem);
+		
+		
+		}
+		
+	}
+}

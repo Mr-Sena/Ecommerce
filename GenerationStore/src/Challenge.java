@@ -29,11 +29,11 @@ Scanner leia = new Scanner(System.in);
 
 		
 		
-		
+			
 		
 		while(on) {
 			double valorTotal = 0;
-			int Itens = 0;
+			int Itens = 0; 
 			double valorImposto = 0;
 			boolean alreadyCart[] = new boolean[10] ; //Vetor para identificar se um item já esta no carrinho.
 			double totalComprasCar[] = new double [10];	
@@ -87,7 +87,7 @@ Scanner leia = new Scanner(System.in);
 					
 					if(qtdeConsumir <= produtosEstoque[produtoSelecionado - 1])
 					{
-						System.out.printf("%d un. de %s adicionado com sucesso no carrinho !!\n", qtdeConsumir, nomeProdutos[produtoSelecionado - 1]);
+						System.out.printf("\n%d un. de %s adicionado com sucesso no carrinho !!\n\n", qtdeConsumir, nomeProdutos[produtoSelecionado - 1]);
 						alreadyCart[produtoSelecionado - 1] = true;
 						itensCarrinho[Itens] = nomeProdutos[produtoSelecionado - 1];
 						qtdeCarrinho[Itens] = qtdeConsumir;
@@ -133,8 +133,8 @@ Scanner leia = new Scanner(System.in);
 			
 			
 			
-			System.out.println("\nOpções de Pagamento");
-			System.out.println("\n[1]À vista em dinheiro ou cheque, recebe 20% de desconto. \n[2]À vista no cartão de crédito, recebe 15% de desconto, \n[3]Em duas vezes, preço normal de etiqueta sem juros, \n[4]Em três vezes, preço normal de etiqueta mais juros de 10%\n");
+			System.out.println("\nOpções de Pagamento: ");
+			System.out.println("\n\t[1]À vista em dinheiro ou cheque, recebe 20% de desconto. \n\t[2]À vista no cartão de crédito, recebe 15% de desconto, \n\t[3]Em duas vezes, preço normal de etiqueta sem juros, \n\t[4]Em três vezes, preço normal de etiqueta mais juros de 10%\n");
 			
 			
 			
@@ -197,7 +197,7 @@ Scanner leia = new Scanner(System.in);
 			System.out.printf("VALOR TRIBUTÁRIO: R$%.2f\n", tributos);
 			
 			while(true) {
-				System.out.println("\nEfetuar nova compra? [S/N]");
+				System.out.print("\nEfetuar nova compra? [S/N]");
 				respostaFinal = leia.next().toUpperCase().charAt(0);
 				if (respostaFinal == 'S') {
 					for(int x = 0; x <= 30; x++) 
