@@ -4,6 +4,8 @@ public class Challenge{
 		
 Scanner leia = new Scanner(System.in);
 		
+//Procedural version
+
 		//Variáveis:
 		char resposta;
 		int qtdeConsumir;
